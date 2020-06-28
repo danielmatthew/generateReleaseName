@@ -1,0 +1,21 @@
+{
+  "name": "generate-release-name",
+  "version": "0.0.1",
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
+  },
+  "scripts": {
+    "start": "npx netlify-lambda serve .netlify/functions"
+  },
+  "dependencies": {
+    "unique-names-generator": "^4.2.0"
+  }
+}
