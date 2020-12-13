@@ -5,15 +5,13 @@ import {
   animals,
 } from "unique-names-generator";
 
-export async function generate(event, context) {
-  const releaseName = uniqueNamesGenerator({
-    dictionaries: [adjectives, colors, animals],
-  });
-
+export async function generate() {
   return {
     statusCode: 200,
     body: JSON.stringify({
-      data: releaseName,
+      data: uniqueNamesGenerator({
+        dictionaries: [adjectives, colors, animals],
+      }),
     }),
   };
 };
