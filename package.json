@@ -2,7 +2,8 @@
   "name": "generate-release-name",
   "version": "0.0.1",
   "devDependencies": {
-    "netlify-lambda": "^1.6.3"
+    "netlify-cli": "^2.69.8",
+    "netlify-lambda": "^2.0.2"
   },
   "proxy": {
     "/.netlify/functions": {
@@ -13,9 +14,10 @@
     }
   },
   "scripts": {
+    "serve": "netlify-lambda serve .netlify/functions",
     "start": "netlify-lambda build .netlify/functions"
   },
   "dependencies": {
-    "unique-names-generator": "^4.2.0"
+    "unique-names-generator": "^4.3.1"
   }
 }
